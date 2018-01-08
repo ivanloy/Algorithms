@@ -1,6 +1,7 @@
+package ivanloy.algorithms.mains;
 
 
-public class ordArray {
+public class OrdArray {
 	
 	public static void main (String[] args) {
 		final boolean[][] input={{false,true,true,false},{false,false,true,true},{true,true,true,false},{true,false,true,false}};

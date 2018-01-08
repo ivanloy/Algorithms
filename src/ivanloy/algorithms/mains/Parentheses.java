@@ -1,8 +1,8 @@
 package ivanloy.algorithms.mains;
 import java.util.Scanner;
 
-import ivanloy.algoritms.util.Calculus;
-import ivanloy.algoritms.util.Conversions;
+import ivanloy.algorithms.util.Calculus;
+import ivanloy.algorithms.util.Conversions;
 
 public class Parentheses {
 
@@ -12,7 +12,7 @@ public class Parentheses {
 		String expression = scanner.next();
 		scanner.close();
 		
-		System.out.println(Conversions.infixToOutfix(expression));
+		//System.out.println(Conversions.infixToOutfix(expression));
 		System.out.println(Calculus.evInfix(expression));
 		
 	}

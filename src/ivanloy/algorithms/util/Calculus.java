@@ -1,4 +1,4 @@
-package ivanloy.algoritms.util;
+package ivanloy.algorithms.util;
 
 import ivanloy.algorithms.apis.dataS.StackL;
 

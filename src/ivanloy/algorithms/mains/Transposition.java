@@ -1,6 +1,6 @@
+package ivanloy.algorithms.mains;
 
-
-public class transposition {
+public class Transposition {
 	
 	public static void main (String[] args) {
 		final int[][] input={{1,4,2,3},{3,3,2,1},{1,4,3,2},{3,2,1,2}};
