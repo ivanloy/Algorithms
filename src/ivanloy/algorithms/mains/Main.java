@@ -6,18 +6,20 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		DequeL<Integer> s = new DequeL<Integer>();
+		RandomBag<Integer> s = new RandomBag<Integer>();
 		
-		s.pushLeft(1);
-		s.pushRight(2);
-		s.pushRight(3);
-		s.pushRight(4);
-		s.pushLeft(5);
-		s.pushRight(6);
+		s.add(1);
+		s.add(2);
+		s.add(3);
+		s.add(4);
+		s.add(5);
 		
-		//System.out.println(s.popLeft() + " " + s.popLeft() + " " + s.popLeft() + " " + s.popLeft() + " " + s.popLeft() + " " + s.popLeft() + " " + s.isEmpty() + " " + s.size());
-		//System.out.println(s.popRight() + " " + s.popRight() + " " + s.popRight() + " " + s.popRight() + " " + s.popRight() + " " + s.popRight() + " " + s.isEmpty() + " " + s.size());
-		System.out.println(s.popLeft() + " " + s.popRight() + " " + s.popLeft() + " " + s.popRight() + " " + s.popLeft() + " " + s.popRight() + " " + s.isEmpty() + " " + s.size());
+		for(int j = 0; j < 100; j++) {
+			
+			for(int i : s) System.out.print(i + " ");
+			System.out.println();
+			
+		}
 	}
 
 }
