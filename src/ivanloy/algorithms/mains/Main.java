@@ -6,20 +6,20 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		RandomBag<Integer> s = new RandomBag<Integer>();
+		RingBuffer<Integer> s = new RingBuffer<Integer>(4);
 		
-		s.add(1);
-		s.add(2);
-		s.add(3);
-		s.add(4);
-		s.add(5);
+		s.enqueue(1);
+		s.enqueue(3);
+		s.enqueue(-1);
+		s.enqueue(23);
+		s.enqueue(-21);
+		s.enqueue(-213);
 		
-		for(int j = 0; j < 100; j++) {
-			
-			for(int i : s) System.out.print(i + " ");
-			System.out.println();
-			
-		}
+		System.out.println(s.dequeue());
+		System.out.println(s.dequeue());
+		System.out.println(s.dequeue());
+		System.out.println(s.dequeue());
+		
 	}
 
 }

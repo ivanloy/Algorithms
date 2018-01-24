@@ -74,7 +74,7 @@ public class StequeL<Item> implements Iterable<Item>{
 	
 	public String toString() {
 		
-		StringBuffer s = new StringBuffer();
+		StringBuilder s = new StringBuilder();
 		for(Item i : this) {
 			
 			s.append(i + " ");

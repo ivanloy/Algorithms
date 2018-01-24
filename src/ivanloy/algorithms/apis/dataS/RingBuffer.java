@@ -21,18 +21,46 @@ public class RingBuffer<T> {
 		
 		this.size = 0;
 		this.maxSize = maxSize;
-		start = new Node();
-		end = start;
 		
 	}
 
 	public void enqueue(T item) {
-	
-		Node oldEnd = end;
-		end = new Node();
-		end.item = item;
-		oldEnd.next = end; //TODO First node fix
+	     
+		if(size < maxSize) {
+			
+			Node oldEnd = end;
+			end = new Node();
+			end.next = null;
+			end.item = item;
+			if(isEmpty()) start = end;
+			else 		  oldEnd.next = end;
+			
+		}else {
+			
+			end.next = start;
+			start = start.next;
+			end = end.next;
+			end.item = item;
+			end.next = null;
+					
+		}
 		
+		
+		
+		size++;
+		
+	}
+	
+	public T dequeue() {
+		
+		T item = start.item;
+		
+		start = start.next;
+		if(isEmpty()) end = null;
+		
+		size--;
+		
+		return item;
 		
 	}
 	
