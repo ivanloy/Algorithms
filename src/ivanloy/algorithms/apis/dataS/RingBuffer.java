@@ -31,9 +31,10 @@ public class RingBuffer<T> {
 			Node oldEnd = end;
 			end = new Node();
 			end.next = null;
-			end.item = item;
+			end.item = item; 
 			if(isEmpty()) start = end;
 			else 		  oldEnd.next = end;
+			size++;
 			
 		}else {
 			
@@ -45,10 +46,6 @@ public class RingBuffer<T> {
 					
 		}
 		
-		
-		
-		size++;
-		
 	}
 	
 	public T dequeue() {
@@ -56,7 +53,7 @@ public class RingBuffer<T> {
 		T item = start.item;
 		
 		start = start.next;
-		if(isEmpty()) end = null;
+		if(isEmpty()) end = null; 
 		
 		size--;
 		

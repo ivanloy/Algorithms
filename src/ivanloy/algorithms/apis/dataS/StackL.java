@@ -1,4 +1,4 @@
-package ivanloy.algorithms.apis.dataS;
+ package ivanloy.algorithms.apis.dataS;
 
 import java.util.Iterator;
 
